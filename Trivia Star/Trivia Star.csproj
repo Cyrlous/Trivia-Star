@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Trivia_Star</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\images\LPBIx2.png" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\TRIVIA_STAR!.svg" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\css\Landing.css" />
+      <None Include="wwwroot\css\Options.css" />
+      <None Include="wwwroot\css\Question.css" />
+      <None Include="wwwroot\Images\LPBIx2.png" />
+      <None Include="wwwroot\Images\TRIVIA_STAR!.svg" />
+      <None Include="wwwroot\js\Options.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+</Project>

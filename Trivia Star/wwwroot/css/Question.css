@@ -1,0 +1,140 @@
+* {
+  font-family:'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url('/Images/StarryBGx2.png') no-repeat center center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.2rem;
+  height: 5rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(0.25rem, 0.25rem);
+}
+
+.container {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  height: 40rem;
+  width: 50rem;
+  background: #C0FEC2;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.question-text {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.answers-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.header {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: linear-gradient(180deg, #0FAA26, #11D12E);
+}
+
+.geo-box {
+  background: #C0FEC2;
+}
+
+.geo-accent {
+  background: linear-gradient(180deg, #0FAA26, #11D12E);
+}
+
+.his-box {
+  background: #D4CAC2;
+}
+
+.his-accent {
+  background: linear-gradient(180deg, #91653E, #B57E4D);
+}
+
+.art-box {
+  background: #FFD7F5;
+}
+
+.art-accent {
+  background: linear-gradient(180deg, #D347B0, #F251C9);
+}
+
+.ent-box {
+  background: #F0EEB5;
+}
+
+.ent-accent {
+  background: linear-gradient(180deg, #D3CC0E, #EBE40F);
+}
+
+.spo-box {
+  background: #FFE2C2;
+}
+
+.spo-accent {
+  background: linear-gradient(180deg, #EB7E02, #FF8800);
+}
+
+.sci-box {
+  background: #A4EAEF;
+}
+
+.sci-accent {
+  background: linear-gradient(180deg, #12C3CF, #14D7E5);
+}
+
+.default-box {
+  background: #D3D3D3;
+}
+
+.default-accent {
+  background: linear-gradient(180deg, #999, #bbb);
+}

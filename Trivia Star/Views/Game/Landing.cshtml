@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Landing";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Landing.css">
+}
+
+<div class="landing-container">
+    <p class="welcome">Welcome To</p>
+    <img src="~/Images/TRIVIA_STAR!.svg" alt="">
+    <button class="start-button" onclick="location.href='@Url.Action("Options", "Game")'">Start Game</button>
+    <button class="learn-button">Learn to Play</button>
+</div>

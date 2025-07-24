@@ -1,0 +1,283 @@
+* {
+  font-family:'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, #040968 0%, #0E15A7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 16rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option-text {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  background: linear-gradient(180deg, #645e02 0%, #f5f102 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.option-button {
+  background: linear-gradient(180deg, rgb(128, 127, 127), rgb(187, 186, 186));
+  font-size: 1.8rem;
+  padding: 1rem 1.6rem;
+  margin-top: 5rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.option-button:hover {
+  background: linear-gradient(180deg, rgb(105, 105, 105), rgb(165, 164, 164));
+}
+
+.option-button:active {
+  background: linear-gradient(180deg, rgb(92, 92, 92), rgb(145, 144, 144));
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: none;
+}
+
+.bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 4rem;
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  pointer-events: none;
+  transform: scale(1.05);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.modal-content {
+  background: linear-gradient(180deg, rgb(128, 127, 127), rgb(187, 186, 186));
+  position: relative;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 80%;
+  max-width: 40rem;
+  text-align: center;
+  box-shadow: 0.25 0.25rem 0.5rem rgba(0,0,0,0.5);
+  transform: scale(0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-content.hide {
+  transform: scale(0.1);
+  opacity: 0;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.dif-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.option {
+  margin: 0.5rem;
+  padding: 1rem 1.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #E51717;
+  font-size: 1.8rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.option:hover {
+  background-color: #BA1A1A;
+}
+
+.option:active {
+  background-color: #BA1A1A;
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: none;
+}
+
+#geoButton {
+  background: linear-gradient(180deg, #0FAA26, #11D12E);
+}
+
+#geoButton:hover {
+  background: linear-gradient(180deg, #09961E, #14C42E);
+}
+
+#hisButton {
+  background: linear-gradient(180deg, #91653E, #B57E4D);
+}
+
+#hisButton:hover {
+  background: linear-gradient(180deg, #8A603C, #A77448);
+}
+
+#artButton {
+  background: linear-gradient(180deg, #D347B0, #F251C9);
+}
+
+#artButton:hover {
+  background: linear-gradient(180deg, #B83C99, #E24CBD);
+}
+
+#entButton {
+  background: linear-gradient(180deg, #D3CC0E, #EBE40F);
+}
+
+#entButton:hover {
+  background: linear-gradient(180deg, #B1AB0D, #E6DF14);
+}
+
+#spoButton {
+  background: linear-gradient(180deg, #EB7E02, #FF8800);
+}
+
+#spoButton:hover {
+  background: linear-gradient(180deg, #CA6D03, #EB7E02);
+}
+
+#sciButton {
+  background: linear-gradient(180deg, #12C3CF, #14D7E5);
+}
+
+#sciButton:hover {
+  background: linear-gradient(180deg, #10b0bb, #12c3cf);
+}
+
+#easyButton {
+  background: linear-gradient(180deg, #0FAA26, #11D12E);
+}
+
+#easyButton:hover {
+  background: linear-gradient(180deg, #09961E, #14C42E);
+}
+
+#medButton {
+  background: linear-gradient(180deg, #D3CC0E, #EBE40F);
+}
+
+#medButton:hover {
+  background: linear-gradient(180deg, #B1AB0D, #E6DF14);
+}
+
+#hardButton {
+  background: linear-gradient(180deg, #be1414, #E51717);
+}
+
+#hardButton:hover {
+  background: linear-gradient(180deg, #ac1212, #d81616);
+}
+
+#playButton {
+  background: linear-gradient(180deg, #029402, #02f502);
+  font-size: 1.8rem;
+  width: 10rem;
+  height: 4.5rem;
+  padding: 1rem 1.6rem;
+  margin-top: 5rem;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+#playButton:hover {
+  background: linear-gradient(180deg, #028302, #03da03);
+}
+
+#playButton:active {
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: none;
+}
+
+#homeButton {
+  background: linear-gradient(180deg, #cfc203, #fae902);
+  font-size: 1.8rem;
+  width: 10rem;
+  height: 4.5rem;
+  padding: 1rem 1.6rem;
+  margin-top: 5rem;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#homeButton:hover {
+  background: linear-gradient(#c7ba02, #e2d302);
+}
+
+#homeButton:active {
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: none;
+}
+
+#difficultyBox {
+  max-width: 15rem;
+}
+
+.close {
+  position:absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

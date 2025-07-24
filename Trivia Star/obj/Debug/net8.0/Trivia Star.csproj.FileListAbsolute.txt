@@ -1,0 +1,33 @@
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\appsettings.Development.json
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\appsettings.json
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Trivia Star.staticwebassets.runtime.json
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Trivia Star.exe
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Trivia Star.deps.json
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Trivia Star.runtimeconfig.json
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Trivia Star.dll
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Trivia Star.pdb
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.GeneratedMSBuildEditorConfig.editorconfig
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.AssemblyInfoInputs.cache
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.AssemblyInfo.cs
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.csproj.CoreCompileInputs.cache
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.MvcApplicationPartsAssemblyInfo.cache
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.RazorAssemblyInfo.cache
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.RazorAssemblyInfo.cs
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets.build.json
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets.development.json
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets\msbuild.Trivia Star.Microsoft.AspNetCore.StaticWebAssets.props
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets\msbuild.build.Trivia Star.props
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Trivia Star.props
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Trivia Star.props
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\staticwebassets.pack.json
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\scopedcss\bundle\Trivia Star.styles.css
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\scopedcss\projectbundle\Trivia Star.bundle.scp.css
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.dll
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\refint\Trivia Star.dll
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.pdb
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.genruntimeconfig.cache
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\ref\Trivia Star.dll
+D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.csproj.AssemblyReference.cache
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia S.4EF3EA75.Up2Date

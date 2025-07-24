@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="Options.css">
+</head>
+
+<body>
+  <div class="container">
+    <p class="option-text">Select Your Options</p>
+    <button id="catButton" class="option-trigger option-button">Category</button>
+    <button id="difButton" class="option-trigger option-button">Difficulty</button>
+    <div class="bottom-row">
+      <button id="playButton">Play</button>
+      <button id="homeButton">Home</button>
+    </div>
+  </div>
+
+  <div id="catModal" class="modal">
+    <div class="modal-content">
+      <h2>Select a Category</h2>
+      <div class="options">
+        <button id="geoButton" class="option">Geography</button>
+        <button id="hisButton" class="option">History</button>
+        <button id="artButton" class="option">The Arts</button>
+        <button id="entButton" class="option">Entertainment</button>
+        <button id="spoButton" class="option">Sports</button>
+        <button id="sciButton" class="option">Science</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="difModal" class="modal">
+    <div id="difficultyBox" class="modal-content">
+      <h2>Select Difficulty</h2>
+      <div class="dif-options">
+        <button id="easyButton" class="option">Easy</button>
+        <button id="medButton" class="option">Medium</button>
+        <button id="hardButton" class="option">Hard</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="Options.js"></script>
+</body>
+</html>

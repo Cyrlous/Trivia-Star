@@ -1,0 +1,65 @@
+@model Trivia_Star.Models.TriviaResponseModel
+
+@{
+    ViewData["Title"] = "Question";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Question.css">
+}
+
+@functions {
+
+    string GetAccentClass(int categoryId) => categoryId switch
+    {
+
+        22 => "geo-accent",
+        23 => "his-accent",
+        25 => "art-accent",
+        11 => "ent-accent",
+        21 => "spo-accent",
+        17 => "sci-accent",
+        _ => "default-theme"
+
+    };
+    
+    string GetBoxClass(int categoryId) => categoryId switch
+    {
+
+        22 => "geo-box",
+        23 => "his-box",
+        25 => "art-box",
+        11 => "ent-box",
+        21 => "spo-box",
+        17 => "sci-box",
+        _ => "default-theme"
+
+    };
+
+}
+
+<div class="container">
+    <div class="question-box @GetBoxClass(Model.CategoryId)">
+        <header class="header @GetAccentClass(Model.CategoryId)">
+            Question 1
+        </header>
+        
+        <div class="question-text">
+            @Html.Raw(Model.Results[0].Question)
+        </div>
+    </div>
+    
+    @{
+        var allAnswers = new List<string>(Model.Results[0].IncorrectAnswers);
+        allAnswers.Add(Model.Results[0].CorrectAnswer);
+        var rng = new Random();
+        allAnswers = allAnswers.OrderBy(x => rng.Next()).ToList();
+    }
+    
+    <div class="answers-box">
+        @foreach (var answer in allAnswers)
+        {
+            <button class="answer-button @GetAccentClass(Model.CategoryId)">@Html.Raw(answer)</button>
+        }
+    </div>
+</div>

@@ -1,0 +1,76 @@
+* {
+  font-family:'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+body {
+  background: url('/Images/LPBIx2.png') no-repeat center center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(8%);
+}
+
+.welcome { 
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  background: linear-gradient(180deg, #200000 0%, #FF0000 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.start-button {
+  background: linear-gradient(180deg, #E51717, #aa1111);
+  font-size: 1.8rem;
+  padding: 1rem 1.6rem 1rem 1.6rem;
+  margin-top: 5rem;
+  border: none;
+  border-radius: 2.5rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.start-button:hover {
+  background-color: #BA1A1A;
+}
+
+.start-button:active {
+  background-color: #910F0F;
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: none;
+}
+
+.learn-button {
+  background-color: #17C6E5;
+  background: linear-gradient(180deg, #17C6E5, #1298af);
+  font-size: 1.3rem;
+  padding: 1rem 1.6rem 1rem 1.6rem;
+  margin-top: 1.2rem;
+  border: none;
+  border-radius: 2.5rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.learn-button:hover {
+  background-color: #1DA2B9;
+}
+
+.learn-button:active {
+  background-color: #1F8091;
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: none;
+}
