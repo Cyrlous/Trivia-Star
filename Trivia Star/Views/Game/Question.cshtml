@@ -1,4 +1,4 @@
-@model Trivia_Star.Models.TriviaResponseModel
+@model Trivia_Star.Models.QuestionModel
 
 @{
     ViewData["Title"] = "Question";
@@ -6,6 +6,10 @@
 
 @section Styles {
     <link rel="stylesheet" href="~/css/Question.css">
+}
+
+@{
+    var categoryId = Context.Session.GetInt32("CategoryId") ?? 0;
 }
 
 @functions {
@@ -39,19 +43,19 @@
 }
 
 <div class="container">
-    <div class="question-box @GetBoxClass(Model.CategoryId)">
-        <header class="header @GetAccentClass(Model.CategoryId)">
+    <div class="question-box @GetBoxClass(categoryId)">
+        <header class="header @GetAccentClass(categoryId)">
             Question 1
         </header>
         
         <div class="question-text">
-            @Html.Raw(Model.Results[0].Question)
+            @Html.Raw(Model.Question)
         </div>
     </div>
     
     @{
-        var allAnswers = new List<string>(Model.Results[0].IncorrectAnswers);
-        allAnswers.Add(Model.Results[0].CorrectAnswer);
+        var allAnswers = new List<string>(Model.IncorrectAnswers);
+        allAnswers.Add(Model.CorrectAnswer);
         var rng = new Random();
         allAnswers = allAnswers.OrderBy(x => rng.Next()).ToList();
     }
@@ -59,7 +63,10 @@
     <div class="answers-box">
         @foreach (var answer in allAnswers)
         {
-            <button class="answer-button @GetAccentClass(Model.CategoryId)">@Html.Raw(answer)</button>
+            <form method="post" asp-action="SubmitAnswer">
+                <input type="hidden" name="selectedAnswer" value="@answer"/>
+                <button type="submit" class="answer-button @GetAccentClass(categoryId)">@Html.Raw(answer)</button>
+            </form>
         }
     </div>
 </div>
