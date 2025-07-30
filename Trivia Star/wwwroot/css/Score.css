@@ -19,11 +19,11 @@ body {
 }
 
 button {
-  font-size: 1.2rem;
-  height: 5rem;
-  width: 100%;
+  font-size: 1.8rem;
+  padding: 1rem;
   border: none;
   border-radius: 1rem;
+  width: 100%;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
@@ -34,25 +34,26 @@ button:active {
   transform: translate(0.25rem, 0.25rem);
 }
 
-.container {
-  font-size: 1.8rem;
+.container {  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.question-box {
+.score-box {
+  font-size: 5rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
   border-radius: 1rem;
-  height: 40rem;
+  height: 50rem;
   width: 50rem;
   background: #C0FEC2;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.question-text {
+.score-text {
   display: flex;
   flex: 1;
   align-items: center;
@@ -61,12 +62,12 @@ button:active {
   text-align: center;
 }
 
-.answers-box {
+.buttons-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
-  gap: 1rem;
+  gap: 4rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -75,9 +76,8 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  flex-shrink: 0;
   height: 5rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;

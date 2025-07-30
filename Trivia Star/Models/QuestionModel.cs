@@ -21,4 +21,7 @@ public class QuestionModel
 
     [JsonProperty("incorrect_answers")]
     public List<string> IncorrectAnswers { get; set; }
+    
+    [JsonIgnore]
+    public int QuestionIndex { get; set; }
  }

@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\css\\Question.css"
     },
     {
+      "Id": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\css\\Score.css",
+      "PackagePath": "staticwebassets\\css\\Score.css"
+    },
+    {
       "Id": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

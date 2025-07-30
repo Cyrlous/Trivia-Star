@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4JSuOyZayNQr98k1FpcqFBwfhGphUkLG5niB7L/VRJQ=",
+  "Hash": "1Gl0tz2M9C5XPuAny/A34ijXzckpHGl/v5bFYLPgyik=",
   "Source": "Trivia Star",
   "BasePath": "_content/Trivia Star",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Question.css"
+    },
+    {
+      "Identity": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\css\\Score.css",
+      "SourceId": "Trivia Star",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\",
+      "BasePath": "_content/Trivia Star",
+      "RelativePath": "css/Score.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Score.css"
     },
     {
       "Identity": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\css\\site.css",

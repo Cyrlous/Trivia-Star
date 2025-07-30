@@ -1,0 +1,57 @@
+@model Trivia_Star.Models.ScoreModel
+
+@{
+    ViewData["Title"] = "Score";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Score.css">
+}
+
+@{
+    var categoryId = Context.Session.GetInt32("CategoryId") ?? 0;
+}
+
+@functions {
+
+    string GetAccentClass(int categoryId) => categoryId switch
+    {
+
+        22 => "geo-accent",
+        23 => "his-accent",
+        25 => "art-accent",
+        11 => "ent-accent",
+        21 => "spo-accent",
+        17 => "sci-accent",
+        _ => "default-theme"
+
+    };
+
+    string GetBoxClass(int categoryId) => categoryId switch
+    {
+
+        22 => "geo-box",
+        23 => "his-box",
+        25 => "art-box",
+        11 => "ent-box",
+        21 => "spo-box",
+        17 => "sci-box",
+        _ => "default-theme"
+
+    };
+}
+
+<div class="container">
+    <div class="score-box @GetBoxClass(categoryId)">
+        <header class="header @GetAccentClass(categoryId)">
+            Final Score
+        </header>
+        <div class="score-text">
+            @Model.TotalScore / @Model.TotalPossible
+        </div>
+        <div class="buttons-box">
+            <button class="@GetAccentClass(categoryId)" onclick="location.href='@Url.Action("Landing", "Game")'">Home</button>
+            <button class="@GetAccentClass(categoryId)" onclick="location.href='@Url.Action("Options", "Game")'">Play Again</button>
+        </div>
+    </div>
+</div>

@@ -16,6 +16,7 @@
       <None Include="wwwroot\css\Landing.css" />
       <None Include="wwwroot\css\Options.css" />
       <None Include="wwwroot\css\Question.css" />
+      <None Include="wwwroot\css\Score.css" />
       <None Include="wwwroot\Images\LPBIx2.png" />
       <None Include="wwwroot\Images\TRIVIA_STAR!.svg" />
       <None Include="wwwroot\js\Options.js" />
