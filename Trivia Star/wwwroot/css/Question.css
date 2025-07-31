@@ -46,6 +46,8 @@ button:active {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
   height: 40rem;
   width: 50rem;
   background: #C0FEC2;
@@ -72,6 +74,7 @@ button:active {
 .header {
   font-size: 1.8rem;
   font-weight: bold;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,4 +141,32 @@ button:active {
 
 .default-accent {
   background: linear-gradient(180deg, #999, #bbb);
+}
+
+.correct {
+  background: linear-gradient(180deg, #05b305, #06ef06); 
+  color: white;
+}
+
+.incorrect {
+  background: linear-gradient(180deg, #a30416, #f30520);
+  color: white;
+}
+
+.faded {
+  opacity: 0.75;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.next-button {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  max-width: 15rem;
+  height: 4rem;
 }

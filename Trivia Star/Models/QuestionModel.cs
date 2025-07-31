@@ -24,4 +24,12 @@ public class QuestionModel
     
     [JsonIgnore]
     public int QuestionIndex { get; set; }
+    
+    [JsonIgnore]
+    public string UserSelectedAnswer { get; set; }
+    
+    [JsonIgnore]
+    public bool AnswerSubmitted => !string.IsNullOrEmpty(UserSelectedAnswer);
+    
+    public List<string> ShuffledAnswers { get; set; } = new List<string>();
  }

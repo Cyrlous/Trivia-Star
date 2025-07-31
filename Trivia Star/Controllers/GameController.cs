@@ -84,6 +84,14 @@ public class GameController : Controller
     var question = questions[index];
     question.QuestionIndex = index;
     
+    var allAnswers = new List<string>(question.IncorrectAnswers);
+    allAnswers.Add(question.CorrectAnswer);
+    var rng = new Random();
+    allAnswers = allAnswers.OrderBy(x => rng.Next()).ToList();
+    question.ShuffledAnswers = allAnswers;
+    
+    HttpContext.Session.SetString(QuestionsKey, JsonConvert.SerializeObject(questions));
+    
     return View(question);
   }
 
@@ -105,17 +113,24 @@ public class GameController : Controller
       return RedirectToAction("Score");
     }
     
-    var correctAnswer = questions[index].CorrectAnswer;
+    var question = questions[index];
+    question.UserSelectedAnswer = selectedAnswer;
 
-    if (selectedAnswer == correctAnswer)
+    if (selectedAnswer == question.CorrectAnswer)
     {
       score++;
       HttpContext.Session.SetInt32(ScoreKey, score);
     }
     
-    index++;
-    HttpContext.Session.SetInt32(IndexKey, index);
+    questions[index] = question;
     
+    return View("Question", question);
+  }
+
+  public IActionResult NextQuestion()
+  {
+    var index = HttpContext.Session.GetInt32(IndexKey) ?? 0;
+    HttpContext.Session.SetInt32(IndexKey, index + 1);
     return RedirectToAction("Question");
   }
 
