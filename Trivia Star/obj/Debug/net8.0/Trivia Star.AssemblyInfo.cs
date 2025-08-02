@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trivia Star")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8124d4e5983a9c86471af4257f3ae36e828ee661")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e22f1a285736d7f13b95a8a183a7d590ae4807bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trivia Star")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trivia Star")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

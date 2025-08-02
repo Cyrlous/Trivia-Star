@@ -31,3 +31,4 @@ D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\ref\Trivia Star.dll
 D:\_My Projects\Trivia Star\Trivia Star\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.csproj.AssemblyReference.cache
 D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia S.4EF3EA75.Up2Date
+D:\_My Projects\Trivia Star\Trivia Star\obj\Debug\net8.0\Trivia Star.sourcelink.json

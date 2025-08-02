@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="~/css/Question.css">
 }
 
+@section Scripts {
+    @if (!Model.AnswerSubmitted)
+    {
+        <script src="~/js/Question.js" defer></script>
+    }
+}
+
 @{
     var categoryId = Context.Session.GetInt32("CategoryId") ?? 0;
 }
@@ -43,51 +50,65 @@
 }
 
 <div class="container">
-    <div class="question-box @GetBoxClass(categoryId)">
-        <header class="header @GetAccentClass(categoryId)">
-            Question @(Model.QuestionIndex + 1)
-        </header>
-        
-        <div class="question-text">
-            @Html.Raw(Model.Question)
+    <div class="layout-row">
+        <div class="timer-box @GetBoxClass(categoryId)">
+            <header class="header time-header @GetAccentClass(categoryId)">
+                Time
+            </header>
+            <div class="timer-text" id="timer" data-initial-time="@Model.RemainingTime" 
+                 data-answer-submitted="@Model.AnswerSubmitted.ToString().ToLower()">
+                @Model.RemainingTime
+            </div>
         </div>
-
-        @if (Model.AnswerSubmitted)
-        {
-            <form method="post" asp-action="NextQuestion">
-                <button class="next-button @GetAccentClass(categoryId)">Next</button>
-            </form>
-        }
-    </div>
-    
-    <div class="answers-box">
-        @foreach (var answer in Model.ShuffledAnswers)
-        {
-            var buttonClass = GetAccentClass(categoryId);
-            
-            if (Model.AnswerSubmitted)
-            {
-                if (answer == Model.CorrectAnswer)
-                {
-                    buttonClass += " correct";
-                }
-                else if (answer == Model.UserSelectedAnswer)
-                {
-                    buttonClass += " incorrect";
-                }
-                else
-                {
-                    buttonClass += " faded";
-                }
-            }
-
-            <form method="post" asp-action="SubmitAnswer">
-                <input type="hidden" name="selectedAnswer" value="@answer"/>
-                <button type="submit" class="@buttonClass" @(Model.AnswerSubmitted ? "disabled" : "")>
-                    @Html.Raw(answer)
-                </button>
-            </form>
-        }
         
+        <div class="main-column">
+            <div class="question-box @GetBoxClass(categoryId)">
+                <header class="header @GetAccentClass(categoryId)">
+                    Question @(Model.QuestionIndex + 1)
+                </header>
+
+                <div class="question-text">
+                    @Html.Raw(Model.Question)
+                </div>
+
+                @if (Model.AnswerSubmitted)
+                {
+                    <form method="post" asp-action="NextQuestion">
+                        <button class="next-button @GetAccentClass(categoryId)">Next</button>
+                    </form>
+                }
+            </div>
+
+            <div class="answers-box">
+                 @foreach (var answer in Model.ShuffledAnswers)
+                 {
+                      var buttonClass = GetAccentClass(categoryId);
+
+                      if (Model.AnswerSubmitted)
+                      {
+                         if (answer == Model.CorrectAnswer)
+                         {
+                        buttonClass += " correct";
+                         }
+                         else if (answer == Model.UserSelectedAnswer)
+                         {
+                            buttonClass += " incorrect";
+                         }
+                         else
+                         {
+                            buttonClass += " faded";
+                         }
+                      }
+
+                      <form method="post" asp-action="SubmitAnswer">
+                          <input type="hidden" name="selectedAnswer" value="@answer"/>
+                          <input type="hidden" name="remainingTime" />
+                         <button type="submit" class="@buttonClass" @(Model.AnswerSubmitted ? "disabled" : "")>
+                            @Html.Raw(answer)
+                         </button>
+                     </form>
+                 }
+            </div>  
+        </div>
     </div>
 </div>

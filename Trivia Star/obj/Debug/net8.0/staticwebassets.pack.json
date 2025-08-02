@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\js\\Options.js"
     },
     {
+      "Id": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\Question.js",
+      "PackagePath": "staticwebassets\\js\\Question.js"
+    },
+    {
       "Id": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

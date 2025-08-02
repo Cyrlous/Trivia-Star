@@ -95,7 +95,7 @@ public class GameController : Controller
     return View(question);
   }
 
-  public IActionResult SubmitAnswer(string selectedAnswer)
+  public IActionResult SubmitAnswer(string selectedAnswer, int remainingTime)
   {
     var questionsJson = HttpContext.Session.GetString(QuestionsKey);
     var index = HttpContext.Session.GetInt32(IndexKey) ?? 0;
@@ -103,7 +103,7 @@ public class GameController : Controller
     
     if (string.IsNullOrEmpty(questionsJson))
     {
-      return RedirectToAction("Landing");
+      return RedirectToAction("Options");
     }
     
     var questions = JsonConvert.DeserializeObject<List<QuestionModel>>(questionsJson);
@@ -115,15 +115,19 @@ public class GameController : Controller
     
     var question = questions[index];
     question.UserSelectedAnswer = selectedAnswer;
+    question.AnswerSubmitted = true;
+    question.RemainingTime = remainingTime;
 
-    if (selectedAnswer == question.CorrectAnswer)
+    if (!string.IsNullOrEmpty(selectedAnswer) && selectedAnswer == question.CorrectAnswer)
     {
       score++;
       HttpContext.Session.SetInt32(ScoreKey, score);
     }
     
     questions[index] = question;
+    HttpContext.Session.SetString(QuestionsKey, JsonConvert.SerializeObject(questions));
     
+    question.QuestionIndex = index;
     return View("Question", question);
   }
 

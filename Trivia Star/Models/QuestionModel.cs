@@ -29,7 +29,9 @@ public class QuestionModel
     public string UserSelectedAnswer { get; set; }
     
     [JsonIgnore]
-    public bool AnswerSubmitted => !string.IsNullOrEmpty(UserSelectedAnswer);
+    public bool AnswerSubmitted { get; set; }
     
     public List<string> ShuffledAnswers { get; set; } = new List<string>();
- }
+
+    public int RemainingTime { get; set; } = 15;
+}
