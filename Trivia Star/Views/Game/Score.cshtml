@@ -47,7 +47,12 @@
             Final Score
         </header>
         <div class="score-text">
-            @Model.TotalScore / @Model.TotalPossible
+            <div>
+                @Model.NumberRight / @Model.TotalPossible
+            </div>
+            <div>
+                @Model.FinalScore
+            </div>
         </div>
         <div class="buttons-box">
             <button class="@GetAccentClass(categoryId)" onclick="location.href='@Url.Action("Landing", "Game")'">Home</button>

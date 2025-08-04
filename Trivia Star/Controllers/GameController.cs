@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ namespace Trivia_Star.Controllers;
 
 public class GameController : Controller
 {
+  private const string NumberRightKey = "NumberRight";
   private const string ScoreKey = "CurrentScore";
   private const string IndexKey = "CurrentQuestionIndex";
   private const string QuestionsKey = "Questions";
@@ -57,6 +59,7 @@ public class GameController : Controller
     }
     
     HttpContext.Session.SetString(QuestionsKey, JsonConvert.SerializeObject(triviaResponse.Results));
+    HttpContext.Session.SetInt32(NumberRightKey, 0);
     HttpContext.Session.SetInt32(ScoreKey, 0);
     HttpContext.Session.SetInt32(IndexKey, 0);
     HttpContext.Session.SetInt32(CategoryIdKey, category);
@@ -100,6 +103,7 @@ public class GameController : Controller
     var questionsJson = HttpContext.Session.GetString(QuestionsKey);
     var index = HttpContext.Session.GetInt32(IndexKey) ?? 0;
     var score = HttpContext.Session.GetInt32(ScoreKey) ?? 0;
+    var numRight = HttpContext.Session.GetInt32(NumberRightKey) ?? 0;
     
     if (string.IsNullOrEmpty(questionsJson))
     {
@@ -120,7 +124,22 @@ public class GameController : Controller
 
     if (!string.IsNullOrEmpty(selectedAnswer) && selectedAnswer == question.CorrectAnswer)
     {
-      score++;
+      numRight++;
+      
+      if (question.Difficulty == "easy")
+      {
+        score++;
+      }
+      else if (question.Difficulty == "medium")
+      {
+        score += 2;
+      }
+      else if (question.Difficulty == "hard")
+      {
+        score += 3;
+      }
+      
+      HttpContext.Session.SetInt32(NumberRightKey, numRight);
       HttpContext.Session.SetInt32(ScoreKey, score);
     }
     
@@ -140,13 +159,15 @@ public class GameController : Controller
 
   public IActionResult Score()
   {
-    var score = HttpContext.Session.GetInt32(ScoreKey) ?? 0;
+    var numRight = HttpContext.Session.GetInt32(NumberRightKey) ?? 0;
+    var finalScore = HttpContext.Session.GetInt32(ScoreKey) ?? 0;
     var total = 10;
     
     var model = new ScoreModel
     {
-      TotalScore = score,
-      TotalPossible = total
+      NumberRight = numRight,
+      TotalPossible = total,
+      FinalScore = finalScore
     };
     
     HttpContext.Session.Remove(QuestionsKey);
