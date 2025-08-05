@@ -11,7 +11,7 @@
 @section Scripts {
     @if (!Model.AnswerSubmitted)
     {
-        <script src="~/js/Question.js" defer></script>
+        <script src="~/js/Question.js"></script>
     }
 }
 
@@ -102,11 +102,11 @@
 
                       <form method="post" asp-action="SubmitAnswer">
                           <input type="hidden" name="selectedAnswer" value="@answer"/>
-                          <input type="hidden" name="remainingTime" />
-                         <button type="submit" class="@buttonClass" @(Model.AnswerSubmitted ? "disabled" : "")>
-                            @Html.Raw(answer)
-                         </button>
-                     </form>
+                          <input type="hidden" name="remainingTime" value="@Model.RemainingTime"/>
+                          <button type="submit" class="@buttonClass" @(Model.AnswerSubmitted ? "disabled" : "")>
+                             @Html.Raw(answer)
+                          </button>
+                      </form>
                  }
             </div>  
         </div>
