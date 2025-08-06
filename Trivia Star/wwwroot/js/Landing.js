@@ -1,14 +1,23 @@
-document.querySelector("#startButton").addEventListener("click", function(e) 
+document.addEventListener("DOMContentLoaded", function() 
 {
-    e.preventDefault();
-    const overlay = document.getElementById("sweepOverlay")
-    overlay.style.left = "0";
+    const overlay=document.getElementById('sweepOverlay');
     
-    const targetUrl = this.dataset.url;
-
-    // Wait for animation to finish before navigating
+    
     setTimeout(() => 
     {
-        window.location.href = targetUrl;
-    }, 800);    
+        overlay.style.left = "100%";
+    }, 100)
+    
+    const startButton=document.getElementById('startButton');
+
+    startButton.addEventListener('click', function(e)
+    {
+        e.preventDefault();
+        overlay.style.left = '0';
+        const targetUrl = this.getAttribute('data-url');
+
+        setTimeout(() => {
+            window.location.href = targetUrl;
+        }, 800);
+    });
 });

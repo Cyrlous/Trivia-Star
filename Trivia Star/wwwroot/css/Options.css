@@ -284,3 +284,14 @@ button {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+#sweepOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 9999;
+  transition: left 0.8s ease-in-out;
+}

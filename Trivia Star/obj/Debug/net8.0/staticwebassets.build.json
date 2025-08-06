@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dpeEwJNA6xDTYHqXgJkL9UTJxc5k7D21e8CsJSJnFUc=",
+  "Hash": "f4MzdCVEv79VGOv+dsCpeLWNGnLQbFsrDo5nWIHroRs=",
   "Source": "Trivia Star",
   "BasePath": "_content/Trivia Star",
   "Mode": "Default",
@@ -281,6 +281,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Question.js"
+    },
+    {
+      "Identity": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\Score.js",
+      "SourceId": "Trivia Star",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\",
+      "BasePath": "_content/Trivia Star",
+      "RelativePath": "js/Score.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Score.js"
     },
     {
       "Identity": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\site.js",

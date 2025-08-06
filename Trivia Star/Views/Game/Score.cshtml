@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="~/css/Score.css">
 }
 
+@section Scripts {
+    <script src="~/js/Score.js"></script>
+}
+
 @{
     var categoryId = Context.Session.GetInt32("CategoryId") ?? 0;
 }
@@ -41,6 +45,8 @@
     };
 }
 
+<div id="sweepOverlay"></div>
+
 <div class="container">
     <div class="score-box @GetBoxClass(categoryId)">
         <header class="header @GetAccentClass(categoryId)">
@@ -58,8 +64,8 @@
             </div>
         </div>
         <div class="buttons-box">
-            <button class="@GetAccentClass(categoryId)" onclick="location.href='@Url.Action("Landing", "Game")'">Home</button>
-            <button class="@GetAccentClass(categoryId)" onclick="location.href='@Url.Action("Options", "Game")'">Play Again</button>
+            <button class="@GetAccentClass(categoryId)" id="homeButton" data-url="@Url.Action("Landing", "Game")">Home</button>
+            <button class="@GetAccentClass(categoryId)" id="playButton" data-url="@Url.Action("Options", "Game")">Play Again</button>
         </div>
     </div>
 </div>

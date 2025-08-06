@@ -9,10 +9,7 @@
 }
 
 @section Scripts {
-    @if (!Model.AnswerSubmitted)
-    {
         <script src="~/js/Question.js"></script>
-    }
 }
 
 @{
@@ -49,6 +46,8 @@
 
 }
 
+<div id="sweepOverlay"></div>
+
 <div class="container">
     <div class="layout-row">
         <div class="timer-box @GetBoxClass(categoryId)">
@@ -74,7 +73,7 @@
                 @if (Model.AnswerSubmitted)
                 {
                     <form method="post" asp-action="NextQuestion">
-                        <button class="next-button @GetAccentClass(categoryId)">Next</button>
+                        <button class="next-button @GetAccentClass(categoryId)" id="nextButton">Next</button>
                     </form>
                 }
             </div>

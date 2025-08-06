@@ -10,13 +10,15 @@
     <script src="~/js/Options.js" defer></script>
 }
 
+<div id="sweepOverlay"></div>
+
 <div class="container">
     <p class="option-text">Select Your Options</p>
     <button id="catButton" class="option-trigger option-button">Category</button>
     <button id="difButton" class="option-trigger option-button">Difficulty</button>
     <div class="bottom-row">
         <button id="playButton" disabled style="opacity: 0.5; pointer-events: none;">Play</button>
-        <button id="homeButton" onclick="location.href='@Url.Action("Landing", "Game")'" role="link">Home</button>
+        <button id="homeButton"  data-url="@Url.Action("Landing", "Game")" role="link">Home</button>
     </div>
 </div>
 
