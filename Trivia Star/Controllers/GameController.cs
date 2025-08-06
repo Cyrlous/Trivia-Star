@@ -12,7 +12,7 @@ public class GameController : Controller
 {
   private const string NumberRightKey = "NumberRight";
   private const string ScoreKey = "CurrentScore";
-  private const string TimeBonus = "TimeBonus";
+  private const string TimeBonusKey = "TimeBonus";
   private const string IndexKey = "CurrentQuestionIndex";
   private const string QuestionsKey = "Questions";
   private const string CategoryIdKey = "CategoryId";
@@ -63,7 +63,7 @@ public class GameController : Controller
 
     HttpContext.Session.SetString(QuestionsKey, JsonConvert.SerializeObject(triviaResponse.Results));
     HttpContext.Session.SetInt32(NumberRightKey, 0);
-    HttpContext.Session.SetInt32(TimeBonus, 0);
+    HttpContext.Session.SetInt32(TimeBonusKey, 0);
     HttpContext.Session.SetInt32(ScoreKey, 0);
     HttpContext.Session.SetInt32(IndexKey, 0);
     HttpContext.Session.SetInt32(CategoryIdKey, category);
@@ -109,7 +109,7 @@ public class GameController : Controller
     var questionsJson = HttpContext.Session.GetString(QuestionsKey);
     var index = HttpContext.Session.GetInt32(IndexKey) ?? 0;
     var score = HttpContext.Session.GetInt32(ScoreKey) ?? 0;
-    var timeBonus = HttpContext.Session.GetInt32(TimeBonus) ?? 0;
+    var timeBonus = HttpContext.Session.GetInt32(TimeBonusKey) ?? 0;
     var numRight = HttpContext.Session.GetInt32(NumberRightKey) ?? 0;
 
     if (string.IsNullOrEmpty(questionsJson))
@@ -152,7 +152,7 @@ public class GameController : Controller
   {
     var numRight = HttpContext.Session.GetInt32(NumberRightKey) ?? 0;
     var finalScore = HttpContext.Session.GetInt32(ScoreKey) ?? 0;
-    var timeBonus = HttpContext.Session.GetInt32(TimeBonus) ?? 0;
+    var timeBonus = HttpContext.Session.GetInt32(TimeBonusKey) ?? 0;
     var total = 10;
 
     var model = new ScoreModel
@@ -198,7 +198,7 @@ public class GameController : Controller
 
     HttpContext.Session.SetInt32(NumberRightKey, numRight);
     HttpContext.Session.SetInt32(ScoreKey, score);
-    HttpContext.Session.SetInt32(TimeBonus, timeBonus);
+    HttpContext.Session.SetInt32(TimeBonusKey, timeBonus);
   }
 }
 

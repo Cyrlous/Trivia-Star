@@ -6,9 +6,15 @@
     <link rel="stylesheet" href="~/css/Landing.css">
 }
 
+@section Scripts {
+    <script src="~/js/Landing.js" defer></script>
+}
+
+<div id="sweepOverlay"></div>
+
 <div class="landing-container">
     <p class="welcome">Welcome To</p>
     <img src="~/Images/TRIVIA_STAR!.svg" alt="">
-    <button class="start-button" onclick="location.href='@Url.Action("Options", "Game")'">Start Game</button>
+    <button id="startButton" class="start-button" data-url="@Url.Action("Options", "Game")">Start Game</button>
     <button class="learn-button">Learn to Play</button>
 </div>

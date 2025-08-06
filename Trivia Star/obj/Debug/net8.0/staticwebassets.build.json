@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i6l/d7BaYIS8Wl883JQrbj9917QSv30jJyLc6AI2APs=",
+  "Hash": "dpeEwJNA6xDTYHqXgJkL9UTJxc5k7D21e8CsJSJnFUc=",
   "Source": "Trivia Star",
   "BasePath": "_content/Trivia Star",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\TRIVIA_STAR!.svg"
+    },
+    {
+      "Identity": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\Landing.js",
+      "SourceId": "Trivia Star",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\",
+      "BasePath": "_content/Trivia Star",
+      "RelativePath": "js/Landing.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Landing.js"
     },
     {
       "Identity": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\Options.js",

@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\Landing.js",
+      "PackagePath": "staticwebassets\\js\\Landing.js"
+    },
+    {
       "Id": "D:\\_My Projects\\Trivia Star\\Trivia Star\\wwwroot\\js\\Options.js",
       "PackagePath": "staticwebassets\\js\\Options.js"
     },
